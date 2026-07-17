@@ -1,0 +1,8 @@
+# Changelog
+
+## 1.0.0 - 2026-07-17
+
+- Initial private repo version.
+- Add compact two-month date picker for Raycast.
+- Add ISO week numbers.
+- Add configurable copied date formats, including custom token formats.

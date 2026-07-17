@@ -1,0 +1,94 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "date-picker",
+  "title": "Date Picker",
+  "description": "Pick a date from a two-month calendar and copy it in your chosen format.",
+  "icon": "icon.png",
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "date-picker",
+      "title": "Date Picker",
+      "description": "Pick a date and copy it in your chosen format.",
+      "mode": "view",
+      "keywords": [
+        "calendar",
+        "date",
+        "copy"
+      ],
+      "preferences": [
+        {
+          "name": "dateFormat",
+          "title": "Date Format",
+          "description": "Format copied dates with yyyy, MM, and dd tokens.",
+          "type": "dropdown",
+          "required": true,
+          "default": "yyyy-MM-dd",
+          "data": [
+            {
+              "title": "yyyy-MM-dd",
+              "value": "yyyy-MM-dd"
+            },
+            {
+              "title": "dd.MM.yyyy",
+              "value": "dd.MM.yyyy"
+            },
+            {
+              "title": "MM/dd/yyyy",
+              "value": "MM/dd/yyyy"
+            },
+            {
+              "title": "dd/MM/yyyy",
+              "value": "dd/MM/yyyy"
+            },
+            {
+              "title": "yyyy/MM/dd",
+              "value": "yyyy/MM/dd"
+            },
+            {
+              "title": "yyyyMMdd",
+              "value": "yyyyMMdd"
+            },
+            {
+              "title": "Custom",
+              "value": "custom"
+            }
+          ]
+        },
+        {
+          "name": "customDateFormat",
+          "title": "Custom Format (Only Used for Custom)",
+          "description": "Ignored unless Date Format is set to Custom. Supports yyyy, MM, M, dd, d.",
+          "type": "textfield",
+          "required": false,
+          "placeholder": "e.g. yyyy-MM-dd"
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build",
+    "publish": "npx @raycast/api@latest publish",
+    "lint": "eslint . && prettier --check .",
+    "lint:raycast": "ray lint --relaxed",
+    "fix-lint": "ray lint --fix"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.100.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}
