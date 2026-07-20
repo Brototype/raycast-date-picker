@@ -4,6 +4,7 @@
   "title": "Date Picker",
   "description": "Pick a date from a two-month calendar and copy it in your chosen format.",
   "icon": "icon.png",
+  "author": "Brototype",
   "license": "MIT",
   "platforms": [
     "macOS"
