@@ -34,12 +34,38 @@ npm run dev
 
 After `npm run dev`, Raycast will show the local `Date Picker` command. Assign it a hotkey in Raycast Settings > Extensions.
 
-## Publishing for Maintainers
+## Publishing to a Private Organization
 
-The manifest is configured for the private Heiners Org Store. To validate, build, and publish a new private version:
+I originally built Date Picker to publish it in my own private Raycast organization. This repository's `package.json` is therefore configured with my Raycast username and organization handle:
+
+```json
+{
+  "author": "Brototype",
+  "owner": "heiners-org",
+  "access": "private"
+}
+```
+
+If you only want to install the extension locally, you do not need to change these values.
+
+To publish a fork to your own private Raycast organization:
+
+1. Change `author` in `package.json` to your Raycast username.
+2. Change `owner` to your Raycast organization handle, which may differ from the organization's display name. In Raycast, open **Manage Organization**, select the organization, and use **Copy Organization Handle** (`Command` + `Shift` + `.`).
+3. Keep `access` set to `private`.
+4. Log in to the Raycast CLI and publish:
+
+```bash
+npx ray login
+npm run publish
+```
+
+You must be a member of the target organization. Raycast validates and builds the extension before publishing it to that organization's private Store, where only organization members can install it.
+
+For this repository, maintainers can publish a new private Heiners Org version with:
 
 ```bash
 npm run publish
 ```
 
-This publishes directly to the private organization Store; it does not submit the extension to Raycast's public Store.
+This does not submit the extension to Raycast's public Store. See Raycast's [private extension publishing guide](https://developers.raycast.com/teams/publish-a-private-extension) for more details.
