@@ -2,15 +2,17 @@
 
 Native Raycast extension for copying dates in your chosen format.
 
+Date Picker was originally built for distribution through my private Raycast organization, Heiners Org. The source is public so anyone can install it locally or adapt a fork for their own private organization.
+
 It shows the current month and next month as compact calendar grids with ISO week numbers. Select a day and press `Enter` to copy the date with a confirmation HUD, or press `Command` + `Enter` to paste it at the cursor in the previously focused app.
 
 Change the copied date format in Raycast Settings > Extensions > Date Picker. The built-in formats cover common numeric date styles, and the Custom option supports `yyyy`, `MM`, `M`, `dd`, and `d` tokens.
 
 Raycast's native `Grid` API currently supports at most 8 columns per grid or section, so the two months are shown as stacked sections rather than a true side-by-side layout.
 
-## Install from Source
+## Install Locally from Source
 
-You can install Date Picker locally without joining the Raycast organization. Make sure Raycast, Node.js, npm, and Git are installed, then run:
+To install Date Picker as a local developer extension, make sure Raycast, Node.js, npm, and Git are installed, then run:
 
 ```bash
 git clone https://github.com/Brototype/raycast-date-picker.git
@@ -36,7 +38,7 @@ After `npm run dev`, Raycast will show the local `Date Picker` command. Assign i
 
 ## Publishing to a Private Organization
 
-I originally built Date Picker to publish it in my own private Raycast organization. This repository's `package.json` is therefore configured with my Raycast username and organization handle:
+The checked-in `package.json` retains the original private Store settings:
 
 ```json
 {
