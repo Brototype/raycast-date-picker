@@ -1,15 +1,4 @@
-import {
-  Action,
-  ActionPanel,
-  Clipboard,
-  Grid,
-  Icon,
-  PopToRootType,
-  Toast,
-  closeMainWindow,
-  getPreferenceValues,
-  showToast,
-} from "@raycast/api";
+import { Action, ActionPanel, Grid, getPreferenceValues } from "@raycast/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type DateFormatPreference =
@@ -205,19 +194,13 @@ export default function Command() {
                 ]}
                 actions={
                   <ActionPanel title={cell.formattedDate}>
-                    <Action
-                      title="Copy Date"
-                      icon={Icon.Clipboard}
-                      onAction={() => copyDate(cell.formattedDate)}
-                    />
                     <Action.CopyToClipboard
-                      title="Copy Date Without Closing"
+                      title="Copy Date"
                       content={cell.formattedDate}
                     />
                     <Action.Paste
                       title="Paste Date"
                       content={cell.formattedDate}
-                      shortcut={{ modifiers: ["opt"], key: "enter" }}
                     />
                   </ActionPanel>
                 }
@@ -382,19 +365,6 @@ function getISOWeekNumber(date: Date): number {
       (target.getTime() - firstThursday.getTime()) / (7 * 24 * 60 * 60 * 1000),
     )
   );
-}
-
-async function copyDate(formattedDate: string): Promise<void> {
-  await Clipboard.copy(formattedDate);
-  await showToast({
-    style: Toast.Style.Success,
-    title: "Copied date",
-    message: formattedDate,
-  });
-  await closeMainWindow({
-    clearRootSearch: true,
-    popToRootType: PopToRootType.Immediate,
-  });
 }
 
 function resolveDateFormat(preferences: DatePickerPreferences): string {

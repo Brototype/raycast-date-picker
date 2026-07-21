@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 - 2026-07-21
+
+- Show Raycast's copied-to-clipboard confirmation when pressing `Enter`.
+- Move Paste Date to `Command` + `Enter` and remove the `Option` + `Enter` shortcut.
+
 ## 1.0.1 - 2026-07-20
 
 - Add an `Option` + `Enter` action to paste the selected date into the previously focused app.
