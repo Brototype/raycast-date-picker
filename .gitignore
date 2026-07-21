@@ -3,3 +3,6 @@ dist/
 .raycast/
 raycast-env.d.ts
 .DS_Store
+.env
+.env.*
+!.env.example
