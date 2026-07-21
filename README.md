@@ -2,7 +2,7 @@
 
 Native Raycast extension for copying dates in your chosen format.
 
-It shows the current month and next month as compact calendar grids with ISO week numbers. Select a day and press `Enter` to copy the date to the clipboard and close Raycast.
+It shows the current month and next month as compact calendar grids with ISO week numbers. Select a day and press `Enter` to copy the date to the clipboard and close Raycast, or press `Option` + `Enter` to paste it at the cursor in the previously focused app.
 
 Change the copied date format in Raycast Settings > Extensions > Date Picker. The built-in formats cover common numeric date styles, and the Custom option supports `yyyy`, `MM`, `M`, `dd`, and `d` tokens.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2026-07-20
+
+- Add an `Option` + `Enter` action to paste the selected date into the previously focused app.
+
 ## 1.0.0 - 2026-07-17
 
 - Initial private repo version.

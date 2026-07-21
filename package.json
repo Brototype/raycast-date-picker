@@ -5,6 +5,8 @@
   "description": "Pick a date from a two-month calendar and copy it in your chosen format.",
   "icon": "icon.png",
   "author": "Brototype",
+  "owner": "heiners-org",
+  "access": "private",
   "license": "MIT",
   "platforms": [
     "macOS"

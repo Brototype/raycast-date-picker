@@ -214,6 +214,11 @@ export default function Command() {
                       title="Copy Date Without Closing"
                       content={cell.formattedDate}
                     />
+                    <Action.Paste
+                      title="Paste Date"
+                      content={cell.formattedDate}
+                      shortcut={{ modifiers: ["opt"], key: "enter" }}
+                    />
                   </ActionPanel>
                 }
               />
